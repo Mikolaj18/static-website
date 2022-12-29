@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<title>Strona o tematyce dentystycznej</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="To jest podstawowa strona o tematyce dentystycznej.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<script src="app.js"></script>
+
+<body>
+    <div class="main">
+        <header class="main-header">
+            <div class="main-header__content">
+                <div class="main-header__logo">
+                    <img src="assets/header/logo.png" alt="Logo Dental Care">
+                </div>
+                <nav class="main-header__nav js-nav">
+                    <ul>
+                        <li class="js-nav-item"><a href="index.html#mission" target="_blank"><span>Misja</span></a></li>
+                        <li class="js-nav-item"><a href="index.html#about-us" target="_blank"><span>O nas</span></a></li>
+                        <li class="js-nav-item"><a href="opinions.html"><span>Opinie</span></a></li>
+                        <li class="js-nav-item"><a href="index.html#aesthetic-dentistry" target="_blank"><span>Stomatologia estetyczna</span></a></li>
+                        <li class="js-nav-item"><a href="#"><span>Kontakt</span></a></li>
+                        
+                    </ul>
+                </nav>
+                <button class="main-header__collapse-btn js-collapse"></button>
+            </div>
+        </header>
+        <section class="contact">
+            <h1 class="contact__title">Skontaktuj się z nami!</h1>
+            <div class="contact__wrapper">
+                <form>
+                    <div class="form__input">
+                        <label for="imie">Imię</label>
+                        <input type="text" name="imie" id="imie" placeholder="Wprowadź swoje imię"/>
+                    </div>
+
+                    <div class="form__input">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Wprowadź swój adres email"/>
+                    </div>
+
+                    <div class="form__input">
+                        <label for="email">Wiadomość</label>
+                        <textarea name="wiadomosc" id="wiadomosc" rows="4" cols="50" placeholder="Wprowadź swoją wiadomość"></textarea>
+                    </div>
+                    <input type="submit" placeholder="Wyślij">
+                </form>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="main-header__logo">
+                <img src="assets/footer/logo.jpg" alt="Logo Dental Care">
+            </div>
+            <ul>
+                <li>Ul. Przykładowa ulica 23</li>
+                <li>123-456-789</li>
+            </ul>
+            <ul>
+                <li><a href="index.html#mission" target="_blank"><span>Misja</span></a></li>
+                <li><a href="index.html#about-us" target="_blank"><span>O nas</span></a></li>
+                <li><a href="opinions.html"><span>Opinie</span></a></li>
+                <li><a href="index.html#aesthetic-dentistry" target="_blank"><span>Stomatologia estetyczna</span></a></li>
+                <li><a href="#"><span>Kontakt</span></a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>

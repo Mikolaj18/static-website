@@ -1,0 +1,587 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    background: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.main-header {
+    color: #fff;
+    width: 100%;
+    padding: 0;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    background: #e6a63f;
+}
+
+.main-header__logo {
+    max-width: 120px;
+}
+
+.main-header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1500px;
+    padding: 0 20px;
+}
+
+
+.main-header__nav {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 119px;
+    background: #e6a63f;
+    display: none;
+}
+
+.main-header__nav.active {
+    display: block;
+    height: calc(100vh - 80px);
+}
+
+.main-header__collapse-btn {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 36px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    border-radius: 4px;
+}
+
+.main-header__collapse-btn:before, .main-header__collapse-btn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    transition: all .35s;
+}
+
+.main-header__collapse-btn:before {
+    top: 16px;
+}
+
+.main-header__collapse-btn:after {
+    top: 31px;
+}
+
+.main-header__collapse-btn.active:before {
+    transform: translateY(2px) rotate(45deg);
+}
+
+.main-header__collapse-btn.active:after {
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+.main-header__nav ul {
+    display: flex;
+    column-gap: 50px;
+    position: relative;
+    top: 0;
+    box-shadow: none;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    list-style-type: none;
+}
+
+.main-header__nav.active ul {
+    flex-flow: column;
+    row-gap: 50px;
+}
+
+.main-header__nav ul li {
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.main-header__nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.main-header__nav ul li a > span:before {
+    content: "";
+    display: block;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background: #FFFFFF;
+    transition: width .2s
+}
+
+.main-header__nav ul li a:hover > span:before {
+   width: 100%;
+}
+
+.masthead {
+    padding: 0 20px;
+    margin-top: 100px;
+}
+
+.masthead__wrapper {
+    display: flex;
+    flex-flow: wrap;
+    row-gap: 50px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.masthead__content ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: column;
+    row-gap: 10px;
+    margin-top: 30px;
+}
+
+.masthead__content ul li {
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.masthead__content ul li i{
+    width: 25px;
+}
+
+.masthead__introduction, .about-us__introduction {
+    font-size: 2.5rem;
+}
+
+.masthead__brand-name, .about-us__title, .opinions__title, .contact__title, .aesthetic-dentistry__title {
+    font-size: 3.5rem;
+}
+
+.masthead__img {
+    max-width: 700px;
+    width: 100%;
+}
+
+.masthead__btn, .aesthetic-dentistry__btn {
+    margin-top: 50px;
+    border: 1px solid #e6a63f;
+    padding: 20px;
+    border-radius: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.masthead__btn:hover, .aesthetic-dentistry__btn:hover {
+   background: #e6a63f;
+   transition: all 0.5s;
+}
+
+.masthead__btn:hover > span, .aesthetic-dentistry__btn:hover > span {
+    color: #FFFFFF;
+    transition: all 0.5s;
+ }
+
+.masthead__btn span, .aesthetic-dentistry__btn span {
+    color: #e6a63f;
+    font-size: 2.5rem;
+    transition: all 0.5s;
+}
+
+.boxes {
+    margin-top: 100px;
+}
+
+.boxes__wrapper {
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    row-gap: 30px;
+    flex-flow: wrap;
+    padding: 0 20px;
+}
+
+.boxes__box {
+    max-width: 300px;
+    height: 100%;
+    background: #e6a63f;
+    color: #FFFFFF;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.boxes__box-number {
+    font-size: 5.5rem;
+    font-weight: 700;
+}
+
+.boxes__box-title {
+    font-size: 2rem;
+    margin: 15px 0;
+    font-weight: 700;
+}
+
+.boxes__box-description {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.boxes__box-read-more {
+    font-size: 1.7rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.boxes__box-details {
+    display: none;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.boxes__box-details p {
+    font-size: 0.7rem;
+}
+
+.boxes__box-details.active {
+    display: block;
+}
+
+.mission {
+    margin-top: 100px;
+}
+
+.mission__wrapper {
+    padding: 0 20px;
+}
+
+.mission__title {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.mission__boxes {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 50px;
+    margin-top: 50px;
+    color: #999999;
+}
+
+.mission__box {
+    max-width: 550px;
+    width: 100%;
+    padding: 20px;
+}
+
+.mission__box-title {
+    font-size: 3.5rem;
+    color: #e6a63f;
+    text-align: center;
+}
+
+.mission__box-description {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.about-us {
+    background: #e2dde1;
+    margin-top: 100px;
+}
+
+.about-us__wrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    row-gap: 50px;
+}
+
+.about-us__content {
+    max-width: 660px;
+}
+
+.about-us__text {
+    display: flex;
+    flex-flow: column;
+    column-gap: 30px;
+    row-gap: 50px;
+    margin-top: 30px;
+}
+
+.about-us__text p {
+    font-size: 2rem;
+}
+
+.about-us__img {
+    max-width: 700px;
+    width: 100%;
+}
+
+.opinions {
+    margin-top: 100px;
+}
+
+.opinions__wrapper {
+    padding: 0 20px;
+}
+
+.opinions__title {
+    text-align: center;
+}
+
+.opinions__boxes {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    max-width: 1300px;
+    margin: 50px auto;
+}
+
+.opinions__box {
+    max-width: 400px;
+    width: 100%;
+    background: #e6a63f;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.opinions__box-name {
+    font-size: 3rem;
+}
+
+.opinions__box-opinion {
+    font-size: 1.9rem;
+    max-width: 300px;
+    margin: 10px auto 0;
+}
+
+.opinions__box-separator {
+    background: #FFFFFF;
+    width: 100%;
+    height: 1px;
+    margin-top: 20px;
+}
+
+.opinions__box-date {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.contact {
+    margin-top: 50px;
+}
+
+.contact__title {
+    text-align: center;
+}
+
+.contact__wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 650px;
+    border-radius: 25px;
+    background: #e6a63f;
+    margin: 50px auto;
+    padding: 50px 0;
+}
+
+.form__input {
+    display: flex;
+    flex-flow: column;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.form__input label {
+    font-size: 3rem;
+}
+
+.form__input input, .form__input textarea {
+    background: none;
+    padding: 15px 0;
+    border: none;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #000;
+  }
+
+textarea, input {
+    font-family: 'Open Sans', sans-serif;
+}
+
+input[type=submit] {
+    border: none;
+    padding: 20px 50px;
+    text-align: center;
+    width: 100%;
+    max-width: 150px;
+    margin: 50px auto 0;
+    display: flex;
+    justify-content: center;
+    background: #e6a63f;
+    align-items: center;
+    outline: 1px solid #000;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+input[type=submit]:hover {
+    background-color: #fff;
+    color: #e6a63f;
+    outline: none;
+    transition: all 0.5s;
+}
+
+.aesthetic-dentistry__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 70px;
+    padding: 0 20px;
+    flex-flow: wrap;
+}
+
+.aesthetic-dentistry__text {
+    max-width: 660px;
+    font-size: 2rem;
+    margin-top: 30px;
+}
+
+.aesthetic-dentistry__text p{
+    font-size: 0.8rem;
+}
+
+
+.aesthetic-dentistry__img {
+    max-width: 700px;
+    width: 100%;
+}
+
+.aesthetic-dentistry__btn {
+    max-width: 300px;
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    display: flex;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-flow: column;
+    row-gap: 50px;
+}
+
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media(min-width: 700px) {
+    .opinions__boxes {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(min-width: 768px) {
+    .masthead__introduction, .about-us__introduction {
+        font-size: 3.5rem;
+    }
+    
+    .masthead__brand-name, .about-us__title, .opinions__title, .contact__title, .aesthetic-dentistry__title {
+        font-size: 5.5rem;
+    }
+    .masthead__content ul li {
+        font-size: 2.5rem;
+    }
+    .mission__title {
+        font-size: 5rem;
+    }
+    .mission__boxes {
+        grid-template-columns: 1fr 1fr;
+    }
+    .mission__box-title, .mission__box-description  {
+        text-align: left;
+    }
+    .about-us__text {
+        flex-flow: row;;
+    }
+    .footer {
+        flex-flow: row;
+    }
+}
+
+@media(min-width: 900px) {
+    .main-header__nav {
+        position: relative;
+        top: 0;
+        width: auto;
+        display: block;
+    }
+    .main-header__collapse-btn {
+        display: none;
+    }
+
+    @media(min-width: 1000px) {
+        .about-us__wrapper {
+            flex-flow: row;
+        }
+    }
+}
+
+@media(min-width: 1024px) {
+    .opinions__boxes {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
